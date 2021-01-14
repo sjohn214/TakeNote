@@ -1,0 +1,23 @@
+{
+  "name": "TakeNote",
+  "version": "1.0.0",
+  "description": "Note taking application using Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sjohn214/TakeNote.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sjohn214/TakeNote/issues"
+  },
+  "homepage": "https://github.com/sjohn214/TakeNote#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
