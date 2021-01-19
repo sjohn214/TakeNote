@@ -1,7 +1,14 @@
 var savedData = require("../db/savedData");
 var path = require("path");
 var router = require("express").Router();
-var notes = JSON.parse(savedData);
+
+
+
+fs.readFile("db/db.json","utf8", (err, data) => {
+    if (err) throw err;
+    console.log(data);
+});
+var notes = JSON.parse(data);
 
 // HTML route set-up//
 
