@@ -1,7 +1,26 @@
 var savedData = require("../db/savedData");
-
+var path = require("path");
 var router = require("express").Router();
 var notes = JSON.parse(savedData);
+
+// HTML route set-up//
+
+router.get("/notes", function(req, res){
+    res.sendFile(path.join(__dirname, "../public/notes.html"));
+});
+
+router.get("*", function(req, res){
+    res.sendFile(path.join(__dirname, "../public/index.html"));
+});
+
+function updateDbfile(){
+    fs.writeFile("db/db.json", JSON.stringify(notes, '\t'),err =>{
+        if(err)throw err;
+        return true;
+    });
+}
+//will update the db.json with any changes to application files: i.e. additions or deletions.//
+
 
 // API Route set-up//
 
@@ -15,7 +34,7 @@ router.get("/api/notes", function (req, res){
 router.post("/api/notes", function (req, res) {
     savedData.addNote(req.body).then( (note) => {
         res.json(note);
-        updateDb();
+        updateDbfile();
     }).catch(err => {
         console.log(err);
         res.status(500).json(err);
@@ -30,10 +49,11 @@ router.get("/api/notes/:id", function (req, res){
 
 router.delete("/api/notes/:id", function(req, res) {
     notes.splice(req.params.id, 1);
-    updateDb();
+    updateDbfile();
     }).catch(err => {
         console.log(err);
         res.status(500).json(err);
     });
     //will allow for the deletion of note with specific id.//
+    
 module.exports = router;
