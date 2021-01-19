@@ -10,7 +10,13 @@ router.get("*", function(req, res){
     res.sendFile(path.join(__dirname, "../public/index.html"));
 });
 
-
+function updateDbfile(){
+    fs.writeFile("db/db.json", JSON.stringify(notes, '\t'),err =>{
+        if(err)throw err;
+        return true;
+    });
+}
+//will update the db.json with any changes to application files: i.e. additions or deletions.//
 
 
 
