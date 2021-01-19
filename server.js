@@ -1,14 +1,13 @@
 var express = require("express");
-var HTMLapiRoutes = require("./routes/HTMLapiRoutes");
 var app = express();
+
 
 var PORT = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
-
-require("./routes/HTMLapiRoutes")(app);
+app.use(require("./routes/HTMLapiRoutes"));
 
 
 app.listen(PORT, function(){
