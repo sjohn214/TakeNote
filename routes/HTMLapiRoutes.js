@@ -45,6 +45,7 @@ router.post("/api/notes", function (req, res) {
 router.delete("/api/notes/:id", function(req, res) {
     notes.splice(req.params.id, 1);
     updateDbfile();
+    res.json(notes);
     });
     //will allow for the deletion of note with specific id.//
     

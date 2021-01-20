@@ -12,7 +12,7 @@ To create an application that can be used to write, save, and delete notes. This
 ![TakeNote gif](public/assets/notetakevid.gif)
 
 # Live URL:
-<a href="https://youtu.be/3wXqTINIalY">Take Note URL</a>
+<a href="https://youtu.be/-wuuvFoY74k">Take Note Youtube Video</a>
 
 <a href="https://github.com/sjohn214/TakeNote.git">Take Note GitHub Repo</a>
 
