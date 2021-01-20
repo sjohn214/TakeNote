@@ -9,7 +9,7 @@ To create an application that can be used to write, save, and delete notes. This
 * The following image and gif shows the web application's appearance and functionality:
 ![TakeNote](public/assets/takenotespic.png)
 
-![TakeNote gif](public/assets/notetakevid.gif)
+![TakeNote gif](public/assets/TakeNoteapp.gif)
 
 # Live URL:
 <a href="https://youtu.be/-wuuvFoY74k">Take Note Youtube Video</a>
